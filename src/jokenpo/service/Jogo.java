@@ -49,8 +49,9 @@ public class Jogo {
             System.out.println("Empates: " + placar.getEmpates());
 
         } catch (IllegalArgumentException e) {
-            System.out.println("jokenpo.domain.Jogada inválida! Por favor, escolha entre PEDRA, PAPEL ou TESOURA.");
+            System.out.println("Jogada inválida! Por favor, escolha entre PEDRA, PAPEL ou TESOURA.");
         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
             throw new RuntimeException(e);
         }
     }
