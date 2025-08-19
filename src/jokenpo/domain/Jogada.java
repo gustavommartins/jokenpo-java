@@ -1,3 +1,5 @@
+package jokenpo.domain;
+
 public enum Jogada {
 
     PEDRA,PAPEL,TESOURA;
