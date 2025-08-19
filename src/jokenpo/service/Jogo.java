@@ -49,6 +49,7 @@ public class Jogo {
         } catch (IllegalArgumentException e) {
             System.out.println("Jogada inválida! Por favor, escolha entre PEDRA, PAPEL ou TESOURA.");
         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
             throw new RuntimeException(e);
         }
     }
