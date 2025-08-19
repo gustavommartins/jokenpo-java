@@ -12,15 +12,17 @@ public class Jogo {
     private final Jogador jogador1;
     private final Jogador jogador2;
     private final Placar placar;
+    private final Random random;
 
     public Jogo(Jogador jogador1, Jogador jogador2) {
         this.jogador1 = jogador1;
         this.jogador2 = jogador2;
         this.placar = new Placar();
+        this.random = new Random();
     }
 
-    public void iniciar(Scanner scanner) {
-        try {
+    public void iniciar() {
+        try(Scanner scanner = new Scanner(System.in)) {
             System.out.println("Partida iniciada! Escolha sua jogada.\n");
             System.out.println("Digite a jogada (PEDRA, PAPEL ou TESOURA): ");
             String jogadaInput = scanner.nextLine().toUpperCase();
@@ -59,7 +61,7 @@ public class Jogo {
 
     private void geraJogadaAleatoriaDoComputador() {
         Jogada[] jogadaValues = Jogada.values();
-        Jogada jogadaAleatoria = jogadaValues[new Random().nextInt(jogadaValues.length)];
+        Jogada jogadaAleatoria = jogadaValues[this.random.nextInt(jogadaValues.length)];
         this.jogador2.realizaJogada(jogadaAleatoria);
     }
 

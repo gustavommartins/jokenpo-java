@@ -21,7 +21,7 @@ public class Main {
 
         Jogo jogo = new Jogo(jogador, computador);
 
-        jogo.iniciar(scanner);
+        jogo.iniciar();
 
     }
 }
