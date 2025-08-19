@@ -1,3 +1,5 @@
+package jokenpo.domain;
+
 public class Jogador {
 
     private final String nome;
