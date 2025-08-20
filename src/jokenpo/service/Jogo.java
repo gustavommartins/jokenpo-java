@@ -21,8 +21,8 @@ public class Jogo {
         this.random = new Random();
     }
 
-    public void iniciar() {
-        try(Scanner scanner = new Scanner(System.in)) {
+    public void iniciar(Scanner scanner) {
+        try {
             System.out.println("Partida iniciada! Escolha sua jogada.\n");
             System.out.println("Digite a jogada (PEDRA, PAPEL ou TESOURA): ");
             String jogadaInput = scanner.nextLine().toUpperCase();
