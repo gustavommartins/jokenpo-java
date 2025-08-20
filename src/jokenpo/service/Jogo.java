@@ -22,7 +22,7 @@ public class Jogo {
     }
 
     public void iniciar(Scanner scanner) {
-        try{
+        try {
             System.out.println("Partida iniciada! Escolha sua jogada.\n");
             System.out.println("Digite a jogada (PEDRA, PAPEL ou TESOURA): ");
             String jogadaInput = scanner.nextLine().toUpperCase();
