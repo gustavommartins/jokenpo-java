@@ -47,7 +47,22 @@ public class Main {
                 return isProximaPartida(novaResposta, scanner);
             }
         }
-        return isProxima;
+        while (true) {
+            switch (resposta) {
+                case "s" -> {
+                    System.out.println("Iniciando uma nova partida...");
+                    return true;
+                }
+                case "n" -> {
+                    System.out.println("Obrigado por jogar! Até a próxima!");
+                    return false;
+                }
+                default -> {
+                    System.out.println("Resposta inválida! Por favor, digite 's' para sim ou 'n' para não.");
+                    resposta = scanner.nextLine().trim().toLowerCase();
+                }
+            }
+        }
     }
 
 
