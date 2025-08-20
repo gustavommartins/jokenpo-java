@@ -31,23 +31,7 @@ public class Main {
     }
 
     private static boolean isProximaPartida(String resposta, Scanner scanner) {
-        boolean isProxima;
-        switch (resposta) {
-            case "s" -> {
-                System.out.println("Iniciando uma nova partida...");
-                isProxima = true;
-            }
-            case "n" -> {
-                System.out.println("Obrigado por jogar! Até a próxima!");
-                isProxima = false;
-            }
-            default -> {
-                System.out.println("Resposta inválida! Por favor, digite 's' para sim ou 'n' para não.");
-                String novaResposta = scanner.nextLine().trim().toLowerCase();
-                return isProximaPartida(novaResposta, scanner);
-            }
-        }
-        while (true) {
+        while (true){
             switch (resposta) {
                 case "s" -> {
                     System.out.println("Iniciando uma nova partida...");
@@ -58,12 +42,11 @@ public class Main {
                     return false;
                 }
                 default -> {
+                    // Resposta inválida, solicita novamente
                     System.out.println("Resposta inválida! Por favor, digite 's' para sim ou 'n' para não.");
                     resposta = scanner.nextLine().trim().toLowerCase();
                 }
             }
         }
     }
-
-
 }
